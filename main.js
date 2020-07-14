@@ -12,39 +12,128 @@ const displayDate = () => {
 
   document.getElementById("display-element").innerHTML = currentDate;
 }
- 
+
 
 // Write a JavaScript program to convert a number to a string.
+let firstNum = null
 
+const saveNumber = (num) => {
+  firstNum = parseInt(num)
+}
 
+const numToString = () => {
+  let saveNumber = firstNum.toString();
+  return document.getElementById("numInput").innerHTML = saveNumber;
+}
 
 // Write a JavaScript program to convert a string to the number.
 
+const stringToNum = () => {
+  let string2 = parseInt(firstNum);
+  return document.getElementById("stringInput").innerHTML = string2;
+}
 
+// console.log("stringToNum:",stringToNum("54"))
+
+const convertType = () => {
+  let a = stringToNum()
+  let b = numToString()
+
+  return a && b
+}
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
-  // * Boolean
-  // * Null
-  // * Undefined
-  // * Number
-  // * NaN
-  // * String
-  
+// * Boolean
+// * Null
+// * Undefined
+// * Number
+// * NaN
+// * String
+let text = null
 
-  
+const saveText = (txt) => {
+  text = txt
+}
+
+let typeOfData = () => {
+  console.log("a")
+  const a = typeof text;
+
+  return document.getElementById("typeInput").innerHTML = a;
+}
+
+const dataType = () => {
+  console.log("b")
+
+  let a = typeOfData();
+  return a;
+}
+// console.log("typeOfData: ",typeOfData("bull"))
+
 // Write a JavaScript program that adds 2 numbers together.
 
+let secondNum = null
+let thirdNum = null
 
+const saveSecondNumber = (num) => {
+  secondNum = parseInt(num)
+}
+
+const saveThirdNumber = (num) => {
+  thirdNum = parseInt(num)
+}
+
+const multiNumFunctions = () => {
+  let a = numAdd()
+  let b = twoTrue()
+  let c = halfTrue()
+  let d = notTrue()
+
+  return a && b && c && d
+}
+
+const numAdd = (a, b) => {
+  const sum = a + b
+  return document.getElementById("sumOfNum").innerHTML = sum;
+}
+
+// console.log("addedNums:", numAdd(3, 7))
 
 // Write a JavaScript program that runs only when 2 things are true.
 
+const twoTrue = (num1, num2) => {
+  if (num1 && num2) {
+    return document.getElementById("dosTrueNum").innerHTML = true
+  } else {
+    return document.getElementById("dosTrueNum").innerHTML = false
+  }
+}
 
+// console.log("twoTrue :", twoTrue(9, 9))
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
 
+const halfTrue = (f, g) => {
+  if (f || g) {
+    return document.getElementById("eitherTrue").innerHTML = true
+  } else {
+    return document.getElementById("eitherTrue").innerHTML = false
+  }
+}
 
+// console.log("halfTrue :", halfTrue(5, 9))
 
 // Write a JavaScript program that runs when both things are not true.  
+
+const notTrue = (x, y) => {
+  if (x < 0 || y < 0) {
+    return document.getElementById("dosFalseNum").innerHTML = true
+  } else {
+    return document.getElementById("dosFalseNum").innerHTML = false
+  }
+}
+
+// console.log("notTrue :", notTrue(9, 2))
 
 // ***************************
 //         PART TWO
