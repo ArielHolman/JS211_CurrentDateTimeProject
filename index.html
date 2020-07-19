@@ -10,17 +10,16 @@
     <div id="display-element"></div>
     <button onclick="displayDate()">Click Me for Date and Time</button>
     <hr/>
+
     <label for="numInput">Number to String: </label>
     <div id="numInput" name="numInput"></div>
+
     <label for="stringInput">String to Number: </label>
     <div id="stringInput" name="stringInput"></div>
-    <input type="number" value="" onkeyup="saveNumber(this.value)"></input>
+
+    <input type="number" value="" placeholder="Enter Number" onkeyup="saveNumber(this.value)"></input>
     <button onclick= "convertType()" >Click Me</button>
     <hr/>
-    <div id="typeInput"></div>
-    <input type="number" onkeyup="saveText(this.value)"></input>
-    <button onclick="dataType()">What type of data am I?</button>
-    <hr />
     <label for="sumOfNum">Sum: </label>
     <div id="sumOfNum" name="sumOfNum"></div>
     <label for="dosTrueNum">Both numbers True: </label>
@@ -29,9 +28,9 @@
     <div id="eitherTrue" name="eitherTrue"></div>
     <label for="dosFalseNum">Both numbers False: </label>
     <div id="dosFalseNum" name="dosFalseNum"></div>
-    <input type="number" value="" onkeyup="saveSecondNumber(this.value)"></input>
-    <input type="number" value="" onkeyup="saveThirdNumber(this.value)"></input>
-    <button onclick= "multiNumFunctions()" >Click Here</button>
+    <input type="number" id= "secondNum" placeholder="Enter Number" value="" onkeyup="saveSecondNumber(this.value)"></input>
+    <input type="number" id= "thirdNum" placeholder="Enter Number" value="" onkeyup="saveThirdNumber(this.value)"></input>
+    <button onclick="multiNumFunctions()" >Click Here</button>
     <hr/>
     <script src="main.js"></script>
   </body>
